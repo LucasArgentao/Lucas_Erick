@@ -14,7 +14,31 @@
      <!-- Tentei Usar Java Script para fazer um efeito branco através dos Links  -->
 
      <!--colocar nos outras paginas--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css">
-</head>
+     <style>
+
+.contentservice {
+    justify-content: center;
+    display: flex;
+}
+#textoservicos {
+    width: 50%;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+    margin-right: 5%;}
+
+    h1{
+      text-align: center;
+      color: rgb(4, 4, 80);
+    }
+    h2{
+      text-align: center;
+    }
+
+     </style>
+     
+
+    </head>
 <body style="background-color:rgb(163, 197, 201)">  
 
  
@@ -23,136 +47,142 @@
   <img src="https://storage.googleapis.com/kaggle-datasets-images/567482/1030103/704c43ddb62aacb8cdf8a04bbfe7ec30/dataset-cover.jpg?t=2020-03-24-11-27-39"  height="200" width="1600" alt="mulher ao telefone">
   <div id="margembranca"></div>
   
-  <h1 font-size: 50px;  margin-bottom: 20px; font-weight: 1000;color:white;text-align: center;>Customer Churn </h1>   
-   
-    
+  <h1>Customer Churn </h1>   
+  <h2>Prever a rotatividade de clientes em uma indústria de telecomunicações</h2>
+  <div class="contentservice">  
 
-    <form action="predicao" method="POST">  
-      <div></div>
-      <label for="Genero"><b>Genero:</b></label>
-      <select id="Genero" name="Genero">
-        <option value="Feminino">Feminino</option>
-        <option value="Masculino">Masculino</option>
-      </select>
-      </div>
-      <div>
-      <label for="Casado"><b>Casado?:</b></label>
-        <select id="Casado" name="Casado">
-          <option value="Sim">Sim</option>
-          <option value="Nao">Nao</option>
-        </select>
-      </div>
-      <div>
-      <label for="Dependentes"><b>Dependentes?:</b></label>
-        <select id="Dependentes" name="Dependentes">
-          <option value="Sim">Sim</option>
-          <option value="Nao">Nao</option>
-        </select> 
-      </div>
-      <div>
-      <label for="MesesComoCliente"><b>Meses Como Cliente:</b></label>
-        <input type="number" id="MesesComoCliente" />
-      </div>
-      <div>
-      <label for="ServicoTelefone"><b>Serviço de Telefone:</b></label>
-        <select id="ServicoTelefone" name="ServicoTelefone">
-          <option value="Sim">Sim</option>
-          <option value="Nao">Nao</option>
-        </select> 
-      </div>
-      <div>
-      <label for="ServicoInternet"><b>Serviço de Internet:</b></label>
-        <select id="ServicoInternet" name="ServicoInternet">
-          <option value="Fibra"> Fibra</option>
-          <option value="DSL"> DSL</option>
-          <option value="Nao"> Fibra</option>
-        </select>
-      </div>
-      <div> 
-      <label for="ServicoSegurancaOnline"><b>Serviço de Segurança on line:</b></label>
-        <select id="ServicoSegurancaOnline" name="ServicoSegurancaOnline">
-          <option value="Sim">Sim</option>
-          <option value="Nao">Nao</option>
-          <option value=" SemInternet">Sem internet</option>
-        </select>
-      </div>
-      <div> 
-      <label for="ServicoBckupOnline"><b>Serviço de Backup:</b></label>
-        <select id="ServicoBckupOnline" name="ServicoBckupOnline">
-          <option value="Sim">Sim</option>
-          <option value="Nao">Nao</option>
-          <option value=" SemInternet">Sem internet</option>
-        </select> 
-      </div>
-      <div>      
-      <label for="ProtecaoEquipamento"><b>Serviço de Proteção:</b></label>
-        <select id="ProtecaoEquipamento" name="ProtecaoEquipamento">
-          <option value="Sim">Sim</option>
-          <option value="Nao">Nao</option>
-          <option value=" SemInternet">Sem internet</option>
-        </select> 
-      </div>
-      <div>    
-      <label for="ServicoSuporteTecnico"><b>Serviço de Suporte Técnico:</b></label>
-        <select id="ServicoSuporteTecnico" name="ServicoSuporteTecnico">
-          <option value="Sim">Sim</option>
-          <option value="Nao">Nao</option>
-          <option value=" SemInternet">Sem internet</option>
-        </select> 
-      </div>
-      <div>    
-      <label for="ServicoStreamingTV"><b>Serviço de Streaming TV:</b></label>
-        <select id="ServicoStreamingTV" name="ServicoStreamingTV">
-          <option value="Sim">Sim</option>
-          <option value="Nao">Nao</option>
-          <option value=" SemInternet">Sem internet</option>
-        </select> 
-      </div>
-      <div>      
-      <label for="ServicoFilmes"><b>Serviço de Filmes:</b></label>
-        <select id="ServicoFilmes" name="ServicoFilmes">
-          <option value="Sim">Sim</option>
-          <option value="Nao">Nao</option>
-          <option value=" SemInternet">Sem internet</option>
-        </select> 
-      
-      </div>
-      <div>
-      <label for="TipoContrato"><b>Tipo de Contrato:</b></label>
-        <select id="TipoContrato" name="TipoContrato" >
-          <option value="Mensal"> Mensal </option>
-          <option value="Anual"> Anual </option>
-          <option value="2ANOS"> 2 Anos </option>
-        </select>
-      </div>
-      <div> 
-      <label for="FaturaDigital"><b>Fatura Digital:</b></label>
-        <select id="FaturaDigital" name="FaturaDigital">
-          <option value="Sim">Sim</option>
-          <option value="Nao">Nao</option>
-        </select> 
-      </div>
-      <div>
-      <label for="FormaPagamento"><b>Forma de Pagamento :</b></label>
-        <select id="FormaPagamento" name="FormaPagamento">
-          <option value="BoletoEletronico">Boleto Eletronico</option>
-          <option value="CartaoCredito">Cartao de Credito</option>
-          <option value="BoletoImpresso">Boleto Impresso</option>
-          <option value="DebitoAutomatico">Debito Automatico</option>
-        </select> 
-      </div>
-      <div> 
-      <label for="ValorMensal"><b>Valor Mensal:</b></label>
-        <input type="number" id="ValorMensal" />
-      </div>
-      <div>
+        <div id="textoservicos">O churn é uma métrica que indica o quanto sua empresa perdeu de receita de clientes
+          <br>
+          <br>
+          Devido a necessidade de retenção dos clientes existentes, pelo fato de que o custo de aquisição de um novo cliente é muito maior do que para manter o existente esta análise foi feita para entender o comportamento do consumidor e, por sua vez, prever a associação dos clientes, se eles deixarão ou não a empresa.
+        </div>
 
-      <div class="button">
-        <button type="submit">Enviar</button>
-    </div>
-    </form>   
+        <form action="predicao" method="POST">  
+          <div></div>
+          <label for="Genero"><b>Genero:</b></label>
+          <select id="Genero" name="Genero">
+            <option value="Feminino">Feminino</option>
+            <option value="Masculino">Masculino</option>
+          </select>
+          </div>
+          <div>
+          <label for="Casado"><b>Casado?:</b></label>
+            <select id="Casado" name="Casado">
+              <option value="Sim">Sim</option>
+              <option value="Nao">Nao</option>
+            </select>
+          </div>
+          <div>
+          <label for="Dependentes"><b>Dependentes?:</b></label>
+            <select id="Dependentes" name="Dependentes">
+              <option value="Sim">Sim</option>
+              <option value="Nao">Nao</option>
+            </select> 
+          </div>
+          <div>
+          <label for="MesesComoCliente"><b>Meses Como Cliente:</b></label>
+            <input type="number" id="MesesComoCliente" />
+          </div>
+          <div>
+          <label for="ServicoTelefone"><b>Serviço de Telefone:</b></label>
+            <select id="ServicoTelefone" name="ServicoTelefone">
+              <option value="Sim">Sim</option>
+              <option value="Nao">Nao</option>
+            </select> 
+          </div>
+          <div>
+          <label for="ServicoInternet"><b>Serviço de Internet:</b></label>
+            <select id="ServicoInternet" name="ServicoInternet">
+              <option value="Fibra"> Fibra</option>
+              <option value="DSL"> DSL</option>
+              <option value="Nao"> Fibra</option>
+            </select>
+          </div>
+          <div> 
+          <label for="ServicoSegurancaOnline"><b>Serviço de Segurança on line:</b></label>
+            <select id="ServicoSegurancaOnline" name="ServicoSegurancaOnline">
+              <option value="Sim">Sim</option>
+              <option value="Nao">Nao</option>
+              <option value=" SemInternet">Sem internet</option>
+            </select>
+          </div>
+          <div> 
+          <label for="ServicoBckupOnline"><b>Serviço de Backup:</b></label>
+            <select id="ServicoBckupOnline" name="ServicoBckupOnline">
+              <option value="Sim">Sim</option>
+              <option value="Nao">Nao</option>
+              <option value=" SemInternet">Sem internet</option>
+            </select> 
+          </div>
+          <div>      
+          <label for="ProtecaoEquipamento"><b>Serviço de Proteção:</b></label>
+            <select id="ProtecaoEquipamento" name="ProtecaoEquipamento">
+              <option value="Sim">Sim</option>
+              <option value="Nao">Nao</option>
+              <option value=" SemInternet">Sem internet</option>
+            </select> 
+          </div>
+          <div>    
+          <label for="ServicoSuporteTecnico"><b>Serviço de Suporte Técnico:</b></label>
+            <select id="ServicoSuporteTecnico" name="ServicoSuporteTecnico">
+              <option value="Sim">Sim</option>
+              <option value="Nao">Nao</option>
+              <option value=" SemInternet">Sem internet</option>
+            </select> 
+          </div>
+          <div>    
+          <label for="ServicoStreamingTV"><b>Serviço de Streaming TV:</b></label>
+            <select id="ServicoStreamingTV" name="ServicoStreamingTV">
+              <option value="Sim">Sim</option>
+              <option value="Nao">Nao</option>
+              <option value=" SemInternet">Sem internet</option>
+            </select> 
+          </div>
+          <div>      
+          <label for="ServicoFilmes"><b>Serviço de Filmes:</b></label>
+            <select id="ServicoFilmes" name="ServicoFilmes">
+              <option value="Sim">Sim</option>
+              <option value="Nao">Nao</option>
+              <option value=" SemInternet">Sem internet</option>
+            </select> 
+          
+          </div>
+          <div>
+          <label for="TipoContrato"><b>Tipo de Contrato:</b></label>
+            <select id="TipoContrato" name="TipoContrato" >
+              <option value="Mensal"> Mensal </option>
+              <option value="Anual"> Anual </option>
+              <option value="2ANOS"> 2 Anos </option>
+            </select>
+          </div>
+          <div> 
+          <label for="FaturaDigital"><b>Fatura Digital:</b></label>
+            <select id="FaturaDigital" name="FaturaDigital">
+              <option value="Sim">Sim</option>
+              <option value="Nao">Nao</option>
+            </select> 
+          </div>
+          <div>
+          <label for="FormaPagamento"><b>Forma de Pagamento :</b></label>
+            <select id="FormaPagamento" name="FormaPagamento">
+              <option value="BoletoEletronico">Boleto Eletronico</option>
+              <option value="CartaoCredito">Cartao de Credito</option>
+              <option value="BoletoImpresso">Boleto Impresso</option>
+              <option value="DebitoAutomatico">Debito Automatico</option>
+            </select> 
+          </div>
+          <div> 
+          <label for="ValorMensal"><b>Valor Mensal:</b></label>
+            <input type="number" id="ValorMensal" />
+          </div>
+          <div>
 
+          <div class="button">
+            <button type="submit">Analisar</button>
+        </div>
+        </form>   
 
+  </div> 
     <script src='main.js'></script>
     
 </body>
