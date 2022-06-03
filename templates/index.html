@@ -5,35 +5,60 @@
     <title>Customer Churn</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>      
-    <style>
-  .contentservice {
-    justify-content: center;
-    display: flex;
+  <style>
+    
+    @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
     }
-  #textoservicos {
-    width: 50%;
-    font-size: 20px;
-    letter-spacing: 2px;
-    color: white;
-    margin-right: 0%;
-  margin-left: 10%;}
+    }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
 
-  #alinhar {
-    margin-left: 8.5%; 
-    width: 22%; 
-    color: rgb(2, 33, 63);
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+    .contentservice {
+      justify-content: center;
+      display: flex;
+    }
+    #texto {
+      width: 50%;
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: white;
+      margin-right: 0%;
+      margin-left: 2%;
     }
 
-    h1{
-      text-align: center;
-      color: rgb(4, 4, 80);
-    }
-    h2{
-      text-align: center;
-      font-size:large;
-    }
-     </style>
-  </head>
+    #alinhar {
+      border-style: double;    
+      margin-left: 8.5%; 
+      width: 50%; 
+      color: rgb(2, 33, 63);
+      }
+
+      h1{
+        text-align: center;
+        color: rgb(4, 4, 80);
+      }
+      h2{
+        text-align: center;
+        font-size:large;
+      }
+  </style>
+</head>
 <body style="background-color:rgb(163, 197, 201)">  
   
 
@@ -44,131 +69,214 @@
   <h2>Prever a rotatividade de clientes em uma indústria de telecomunicações</h2>
   <div class="contentservice">  
 
-        <div id="textoservicos">O churn é uma métrica que indica o quanto sua empresa perdeu de receita de clientes
+        <div id="texto">O Churn é uma métrica que indica o quanto sua 
+          empresa perdeu de receita de clientes.
           <br>
           <br>
-          Devido a necessidade de retenção dos clientes existentes, pelo fato de que o custo de aquisição de um novo cliente é muito maior do que para manter o existente esta análise foi feita para entender o comportamento do consumidor e, por sua vez, prever a associação dos clientes, se eles deixarão ou não a empresa.
+          Devido a necessidade de retenção dos clientes existentes, 
+          pelo fato de que o custo de aquisição de um novo cliente é 
+          muito maior do que para manter o existente, esta análise foi
+           feita para entender o comportamento do consumidor e, por sua vez, 
+           prever a associação dos clientes, se eles deixarão ou não a empresa.
         </div>
 
         <div id="alinhar">
           <h2>Insira seus Dados Aqui:</h2>
           <form action="predicao" method="POST">  
-            <div>
-              <label for="Genero"><b>Genero:</b></label>
-              <select id="Genero" name="Genero">
-                <option value="Feminino">Feminino</option>
-                <option value="Masculino">Masculino</option>
-              </select>
+            <div class="row">
+              <div class="col-25">
+                <label for="Genero"><b>Genero:</b></label>
+              </div>
+              <div class="col-75">
+                <select id="Genero" name="Genero">
+                  <option value="Feminino">Feminino</option>
+                  <option value="Masculino">Masculino</option>
+                </select>
+              </div>
             </div>
-            <div>
-              <label for="Casado"><b>Casado?:</b></label>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="Casado"><b>Casado?:</b></label>
+              </div>
+              <div class="col-75">
                 <select id="Casado" name="Casado">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
                 </select>
+              </div>
             </div>
+            
+              <div class="row">
+                <div class="col-25">
+                  <label for="Dependentes"><b>Dependentes?:</b></label>
+                </div>
+                <div class="col-75">
+                  <select id="Dependentes" name="Dependentes">
+                    <option value="Sim">Sim</option>
+                    <option value="Nao">Nao</option>
+                  </select> 
+                </div>
+              </div>
             <div>
-              <label for="Dependentes"><b>Dependentes?:</b></label>
-                <select id="Dependentes" name="Dependentes">
-                  <option value="Sim">Sim</option>
-                  <option value="Nao">Nao</option>
-                </select> 
-            </div>
-            <div>
+              <div class="row">
+                <div class="col-25">
               <label for="MesesComoCliente"><b>Meses Como Cliente:</b></label>
+            </div>
+            <div class="col-75">
                 <input type="number" id="MesesComoCliente" />
             </div>
             <div>
+              <div class="row">
+                <div class="col-25">
               <label for="ServicoTelefone"><b>Serviço de Telefone:</b></label>
+            </div>
+            <div class="col-75">
                 <select id="ServicoTelefone" name="ServicoTelefone">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
                 </select> 
+              </div>
             </div>
             <div>
+              <div class="row">
+                <div class="col-25">
               <label for="ServicoInternet"><b>Serviço de Internet:</b></label>
+            </div>
+            <div class="col-75">
                 <select id="ServicoInternet" name="ServicoInternet">
                   <option value="Fibra"> Fibra</option>
                   <option value="DSL"> DSL</option>
                   <option value="Nao"> Fibra</option>
                 </select>
+              </div>
             </div>
             <div> 
+              <div class="row">
+                <div class="col-25">
               <label for="ServicoSegurancaOnline"><b>Serviço de Segurança on line:</b></label>
+            </div>
+            <div class="col-75">
                 <select id="ServicoSegurancaOnline" name="ServicoSegurancaOnline">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
                   <option value=" SemInternet">Sem internet</option>
                 </select>
+              </div>
             </div>
             <div> 
+              <div class="row">
+                <div class="col-25">
               <label for="ServicoBckupOnline"><b>Serviço de Backup:</b></label>
+            </div>
+            <div class="col-75">
                 <select id="ServicoBckupOnline" name="ServicoBckupOnline">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
                   <option value=" SemInternet">Sem internet</option>
-                </select> 
+                </select>
+              </div> 
             </div>
-            <div>      
+            <div>    
+              <div class="row">
+                <div class="col-25">  
               <label for="ProtecaoEquipamento"><b>Serviço de Proteção:</b></label>
+            </div>
+            <div class="col-75">
                 <select id="ProtecaoEquipamento" name="ProtecaoEquipamento">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
                   <option value=" SemInternet">Sem internet</option>
                 </select> 
+              </div>
             </div>
-            <div>    
+            <div>   
+              <div class="row">
+                <div class="col-25"> 
               <label for="ServicoSuporteTecnico"><b>Serviço de Suporte Técnico:</b></label>
+            </div>
+            <div class="col-75">
                 <select id="ServicoSuporteTecnico" name="ServicoSuporteTecnico">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
                   <option value=" SemInternet">Sem internet</option>
                 </select> 
+              </div>
             </div>
             <div>    
+              <div class="row">
+                <div class="col-25">
               <label for="ServicoStreamingTV"><b>Serviço de Streaming TV:</b></label>
+            </div>
+            <div class="col-75">
                 <select id="ServicoStreamingTV" name="ServicoStreamingTV">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
                   <option value=" SemInternet">Sem internet</option>
                 </select> 
+              </div>
             </div>
-            <div>      
+            <div>  
+              <div class="row">
+                <div class="col-25">    
               <label for="ServicoFilmes"><b>Serviço de Filmes:</b></label>
+            </div>
+            <div class="col-75">
                 <select id="ServicoFilmes" name="ServicoFilmes">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
                   <option value=" SemInternet">Sem internet</option>
-                </select>             
+                </select>  
+              </div>           
             </div>
             <div>
+              <div class="row">
+                <div class="col-25">
               <label for="TipoContrato"><b>Tipo de Contrato:</b></label>
+            </div>
+            <div class="col-75">
                 <select id="TipoContrato" name="TipoContrato" >
                   <option value="Mensal"> Mensal </option>
                   <option value="Anual"> Anual </option>
                   <option value="2ANOS"> 2 Anos </option>
                 </select>
+              </div>
             </div>
             <div> 
+              <div class="row">
+                <div class="col-25">
               <label for="FaturaDigital"><b>Fatura Digital:</b></label>
+            </div>
+            <div class="col-75">
                 <select id="FaturaDigital" name="FaturaDigital">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
-                </select> 
+                </select>
+              </div> 
             </div>
             <div>
+              <div class="row">
+                <div class="col-25">
               <label for="FormaPagamento"><b>Forma de Pagamento :</b></label>
+            </div>
+            <div class="col-75">
                 <select id="FormaPagamento" name="FormaPagamento">
                   <option value="BoletoEletronico">Boleto Eletronico</option>
                   <option value="CartaoCredito">Cartao de Credito</option>
                   <option value="BoletoImpresso">Boleto Impresso</option>
                   <option value="DebitoAutomatico">Debito Automatico</option>
                 </select> 
+              </div>
             </div>
             <div> 
+              <div class="row">
+                <div class="col-25">
               <label for="ValorMensal"><b>Valor Mensal:</b></label>
+            </div>
+            <div class="col-75">
                 <input type="number" id="ValorMensal" />
             </div>
+          </div>
             <div>
 
             <div class="button">
