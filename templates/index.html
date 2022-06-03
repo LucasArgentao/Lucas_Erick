@@ -19,15 +19,19 @@
     clear: both;
     }
     .col-25 {
+      margin-left: 2%;
       float: left;
-      width: 25%;
-      margin-top: 6px;
+      width: 50%;
+      
     }
 
     .col-75 {
-      float: left;
-      width: 75%;
-      margin-top: 6px;
+      float:left;
+      width: 0%;
+      
+    }
+    button{
+      margin-left: 52%;
     }
     .contentservice {
       justify-content: center;
@@ -82,7 +86,8 @@
 
         <div id="alinhar">
           <h2>Insira seus Dados Aqui:</h2>
-          <form action="predicao" method="POST">  
+          <form action="predicao" method="POST"> 
+
             <div class="row">
               <div class="col-25">
                 <label for="Genero"><b>Genero:</b></label>
@@ -107,43 +112,44 @@
               </div>
             </div>
             
-              <div class="row">
-                <div class="col-25">
-                  <label for="Dependentes"><b>Dependentes?:</b></label>
-                </div>
-                <div class="col-75">
-                  <select id="Dependentes" name="Dependentes">
-                    <option value="Sim">Sim</option>
-                    <option value="Nao">Nao</option>
-                  </select> 
-                </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="Dependentes"><b>Dependentes?:</b></label>
               </div>
-            <div>
-              <div class="row">
-                <div class="col-25">
-              <label for="MesesComoCliente"><b>Meses Como Cliente:</b></label>
+              <div class="col-75">
+                <select id="Dependentes" name="Dependentes">
+                  <option value="Sim">Sim</option>
+                  <option value="Nao">Nao</option>
+                </select> 
+              </div>
             </div>
-            <div class="col-75">
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="MesesComoCliente"><b>Meses Como Cliente:</b></label>
+              </div>
+              <div class="col-75">
                 <input type="number" id="MesesComoCliente" />
+              </div>
             </div>
-            <div>
-              <div class="row">
-                <div class="col-25">
-              <label for="ServicoTelefone"><b>Serviço de Telefone:</b></label>
-            </div>
-            <div class="col-75">
+
+            <div class="row">
+              <div class="col-25">
+                <label for="ServicoTelefone"><b>Serviço de Telefone:</b></label>
+              </div>
+              <div class="col-75">
                 <select id="ServicoTelefone" name="ServicoTelefone">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
                 </select> 
               </div>
             </div>
-            <div>
-              <div class="row">
-                <div class="col-25">
-              <label for="ServicoInternet"><b>Serviço de Internet:</b></label>
-            </div>
-            <div class="col-75">
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="ServicoInternet"><b>Serviço de Internet:</b></label>
+              </div>
+              <div class="col-75">
                 <select id="ServicoInternet" name="ServicoInternet">
                   <option value="Fibra"> Fibra</option>
                   <option value="DSL"> DSL</option>
@@ -151,12 +157,12 @@
                 </select>
               </div>
             </div>
-            <div> 
-              <div class="row">
-                <div class="col-25">
-              <label for="ServicoSegurancaOnline"><b>Serviço de Segurança on line:</b></label>
-            </div>
-            <div class="col-75">
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="ServicoSegurancaOnline"><b>Serviço de Segurança on line:</b></label>
+              </div>
+              <div class="col-75">
                 <select id="ServicoSegurancaOnline" name="ServicoSegurancaOnline">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
@@ -164,12 +170,12 @@
                 </select>
               </div>
             </div>
-            <div> 
-              <div class="row">
-                <div class="col-25">
-              <label for="ServicoBckupOnline"><b>Serviço de Backup:</b></label>
-            </div>
-            <div class="col-75">
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="ServicoBckupOnline"><b>Serviço de Backup:</b></label>
+              </div>
+              <div class="col-75">
                 <select id="ServicoBckupOnline" name="ServicoBckupOnline">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
@@ -177,12 +183,12 @@
                 </select>
               </div> 
             </div>
-            <div>    
-              <div class="row">
-                <div class="col-25">  
-              <label for="ProtecaoEquipamento"><b>Serviço de Proteção:</b></label>
-            </div>
-            <div class="col-75">
+              
+            <div class="row">
+              <div class="col-25">  
+                <label for="ProtecaoEquipamento"><b>Serviço de Proteção:</b></label>
+              </div>
+              <div class="col-75">
                 <select id="ProtecaoEquipamento" name="ProtecaoEquipamento">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
@@ -190,12 +196,12 @@
                 </select> 
               </div>
             </div>
-            <div>   
-              <div class="row">
-                <div class="col-25"> 
-              <label for="ServicoSuporteTecnico"><b>Serviço de Suporte Técnico:</b></label>
-            </div>
-            <div class="col-75">
+              
+            <div class="row">
+              <div class="col-25"> 
+                <label for="ServicoSuporteTecnico"><b>Serviço de Suporte Técnico:</b></label>
+              </div>
+             <div class="col-75">
                 <select id="ServicoSuporteTecnico" name="ServicoSuporteTecnico">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
@@ -203,12 +209,12 @@
                 </select> 
               </div>
             </div>
-            <div>    
-              <div class="row">
-                <div class="col-25">
-              <label for="ServicoStreamingTV"><b>Serviço de Streaming TV:</b></label>
-            </div>
-            <div class="col-75">
+             
+            <div class="row">
+              <div class="col-25">
+                <label for="ServicoStreamingTV"><b>Serviço de Streaming TV:</b></label>
+               </div>
+              <div class="col-75">
                 <select id="ServicoStreamingTV" name="ServicoStreamingTV">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
@@ -216,12 +222,12 @@
                 </select> 
               </div>
             </div>
-            <div>  
-              <div class="row">
-                <div class="col-25">    
-              <label for="ServicoFilmes"><b>Serviço de Filmes:</b></label>
-            </div>
-            <div class="col-75">
+            
+            <div class="row">
+              <div class="col-25">    
+                <label for="ServicoFilmes"><b>Serviço de Filmes:</b></label>
+              </div>
+              <div class="col-75">
                 <select id="ServicoFilmes" name="ServicoFilmes">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
@@ -229,12 +235,12 @@
                 </select>  
               </div>           
             </div>
-            <div>
-              <div class="row">
-                <div class="col-25">
-              <label for="TipoContrato"><b>Tipo de Contrato:</b></label>
-            </div>
-            <div class="col-75">
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="TipoContrato"><b>Tipo de Contrato:</b></label>
+              </div>
+             <div class="col-75">
                 <select id="TipoContrato" name="TipoContrato" >
                   <option value="Mensal"> Mensal </option>
                   <option value="Anual"> Anual </option>
@@ -242,24 +248,24 @@
                 </select>
               </div>
             </div>
-            <div> 
-              <div class="row">
-                <div class="col-25">
-              <label for="FaturaDigital"><b>Fatura Digital:</b></label>
-            </div>
-            <div class="col-75">
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="FaturaDigital"><b>Fatura Digital:</b></label>
+              </div>
+              <div class="col-75">
                 <select id="FaturaDigital" name="FaturaDigital">
                   <option value="Sim">Sim</option>
                   <option value="Nao">Nao</option>
                 </select>
               </div> 
             </div>
-            <div>
-              <div class="row">
-                <div class="col-25">
-              <label for="FormaPagamento"><b>Forma de Pagamento :</b></label>
-            </div>
-            <div class="col-75">
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="FormaPagamento"><b>Forma de Pagamento :</b></label>
+              </div>
+              <div class="col-75">
                 <select id="FormaPagamento" name="FormaPagamento">
                   <option value="BoletoEletronico">Boleto Eletronico</option>
                   <option value="CartaoCredito">Cartao de Credito</option>
@@ -268,16 +274,16 @@
                 </select> 
               </div>
             </div>
-            <div> 
-              <div class="row">
-                <div class="col-25">
-              <label for="ValorMensal"><b>Valor Mensal:</b></label>
-            </div>
-            <div class="col-75">
+             
+            <div class="row">
+              <div class="col-25">
+                <label for="ValorMensal"><b>Valor Mensal:</b></label>
+              </div>
+              <div class="col-75">
                 <input type="number" id="ValorMensal" />
+              </div>
             </div>
-          </div>
-            <div>
+           
 
             <div class="button">
               <button type="submit">Analisar</button>
