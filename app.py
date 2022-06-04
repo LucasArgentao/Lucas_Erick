@@ -12,8 +12,30 @@ def index():
 
 @app.route('/predicao', methods=['POST'])
 def predicao():
-  comentario = request.form['comentario']
-  predicao = model.predict([comentario])
+  Genero = request.form['Genero']
+  Casado = request.form['Casado']
+  Dependentes = request.form['Dependentes']
+  MesesComoCliente = request.form['MesesComoCliente']
+  ServicoTelefone = request.form['ServicoTelefone']
+  ServicoInternet = request.form['ServicoInternet']
+  ServicoSegurancaOnline = request.form['ServicoSegurancaOnline']
+  ServicoBackupOnline = request.form['ServicoBackupOnline']
+  ProtecaoEquipamento = request.form['ProtecaoEquipamento']
+  ServicoSuporteTecnico = request.form['ServicoSuporteTecnico']
+  ServicoStreamingTV = request.form['ServicoStreamingTV']
+  ServicoFilmes = request.form['ServicoFilmes']
+  TipoContrato = request.form['TipoContrato']
+  FaturaDigital = request.form['FaturaDigital']
+  FormaPagamento = request.form['FormaPagamento']
+  ValorMensal = request.form['ValorMensal']
+ 
+
+
+  predicao = model.predict([Genero,Casado,Dependentes,MesesComoCliente,
+  ServicoTelefone,ServicoInternet,ServicoSegurancaOnline,
+  ServicoBackupOnline,ProtecaoEquipamento,ServicoSuporteTecnico,
+  ServicoStreamingTV,ServicoFilmes,TipoContrato,FaturaDigital,
+  FormaPagamento,ValorMensal])
   return render_template('resposta.html', predicao=predicao[0])
 
 app.run(debug=True)
