@@ -1,7 +1,7 @@
 import cloudpickle
 from flask import Flask, render_template, request
 
-with open('model.pkl', 'rb') as file_in:
+with open('model1.pkl', 'rb') as file_in:
   model = cloudpickle.load(file_in)
 
 app = Flask(__name__)
