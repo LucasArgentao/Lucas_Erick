@@ -3,8 +3,8 @@
     <title>Resposta</title>
 </head>
 <body>
-    {% if predicao == 1 %}
-        <div style="color: blue">Usuário não Cancelou </div>
+    {% if predicao == 0 %}
+        <div style="color:green">Usuário não Cancelou </div>
     {% else %}
         <div style="color: red">Usuário Cancelou</div>
     {% endif %}
