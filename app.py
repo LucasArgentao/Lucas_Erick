@@ -1,7 +1,7 @@
 import cloudpickle
 from flask import Flask, render_template, request
 
-with open('model1.pkl', 'rb') as file_in:
+with open('model.pkl', 'rb') as file_in:
   model = cloudpickle.load(file_in)
 
 app = Flask(__name__)
@@ -27,7 +27,7 @@ def predicao():
   TipoContrato = int(request.form['TipoContrato'])
   FaturaDigital = int(request.form['FaturaDigital'])
   FormaPagamento = int(request.form['FormaPagamento'])
-  ValorMensal = int(request.form['ValorMensal'])
+  ValorMensal = float(request.form['ValorMensal'])
  
 
 
