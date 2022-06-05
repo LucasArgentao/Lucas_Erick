@@ -12,22 +12,22 @@ def index():
 
 @app.route('/predicao', methods=['POST'])
 def predicao():
-  Genero = request.form['Genero']
-  Casado = request.form['Casado']
-  Dependentes = request.form['Dependentes']
-  MesesComoCliente = request.form['MesesComoCliente']
-  ServicoTelefone = request.form['ServicoTelefone']
-  ServicoInternet = request.form['ServicoInternet']
-  ServicoSegurancaOnline = request.form['ServicoSegurancaOnline']
-  ServicoBackupOnline = request.form['ServicoBackupOnline']
-  ProtecaoEquipamento = request.form['ProtecaoEquipamento']
-  ServicoSuporteTecnico = request.form['ServicoSuporteTecnico']
-  ServicoStreamingTV = request.form['ServicoStreamingTV']
-  ServicoFilmes = request.form['ServicoFilmes']
-  TipoContrato = request.form['TipoContrato']
-  FaturaDigital = request.form['FaturaDigital']
-  FormaPagamento = request.form['FormaPagamento']
-  ValorMensal = request.form['ValorMensal']
+  Genero = int(request.form['Genero'])
+  Casado = int(request.form['Casado'])
+  Dependentes = int(request.form['Dependentes'])
+  MesesComoCliente = int(request.form['MesesComoCliente'])
+  ServicoTelefone = int(request.form['ServicoTelefone'])
+  ServicoInternet = int(request.form['ServicoInternet'])
+  ServicoSegurancaOnline = int(request.form['ServicoSegurancaOnline'])
+  ServicoBackupOnline = int(request.form['ServicoBackupOnline'])
+  ProtecaoEquipamento = int(request.form['ProtecaoEquipamento'])
+  ServicoSuporteTecnico = int(request.form['ServicoSuporteTecnico'])
+  ServicoStreamingTV = int(request.form['ServicoStreamingTV'])
+  ServicoFilmes = int(request.form['ServicoFilmes'])
+  TipoContrato = int(request.form['TipoContrato'])
+  FaturaDigital = int(request.form['FaturaDigital'])
+  FormaPagamento = int(request.form['FormaPagamento'])
+  ValorMensal = int(request.form['ValorMensal'])
  
 
 
