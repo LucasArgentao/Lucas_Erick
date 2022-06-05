@@ -29,9 +29,7 @@ def predicao():
   FormaPagamento = int(request.form['FormaPagamento'])
   ValorMensal = float(request.form['ValorMensal'])
  
-
-
-  predicao = model.predict([Genero,Casado,Dependentes,MesesComoCliente,ServicoTelefone,ServicoInternet,ServicoSegurancaOnline,ServicoBackupOnline,ProtecaoEquipamento,ServicoSuporteTecnico,ServicoStreamingTV,ServicoFilmes,TipoContrato,FaturaDigital,FormaPagamento,ValorMensal])
+  predicao = model.predict([[Genero,Casado,Dependentes,MesesComoCliente,ServicoTelefone,ServicoInternet,ServicoSegurancaOnline,ServicoBackupOnline,ProtecaoEquipamento,ServicoSuporteTecnico,ServicoStreamingTV,ServicoFilmes,TipoContrato,FaturaDigital,FormaPagamento,ValorMensal]])
   return render_template('resposta.html', predicao=predicao[0])
 
 app.run(debug=True)
