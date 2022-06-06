@@ -40,4 +40,7 @@ app.run(debug=True)
 # git commit -m "nomenovo"
 # git push
 
+#0 - nao houve churn
+#1 - sim
+
 
