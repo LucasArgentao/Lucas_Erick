@@ -34,8 +34,8 @@ def predicao():
 
 app.run(debug=True)
 
-# pip install -r requirements.txt (instala as bibliotecas)
-# python app.py (para executar)
+# pip install python app.py-r requirements.txt (instala as bibliotecas)
+#  (para executar)
 # git add .
 # git commit -m "nomenovo"
 # git push
