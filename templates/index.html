@@ -69,24 +69,19 @@
       }
   </style>
 </head>
-<body style="background-color:rgb(163, 197, 201)">  
+<body style="background-color:rgb(243, 235, 200)">  
   
 
   <img src="https://storage.googleapis.com/kaggle-datasets-images/567482/1030103/704c43ddb62aacb8cdf8a04bbfe7ec30/dataset-cover.jpg?t=2020-03-24-11-27-39"  height="170" width="1335" alt="mulher ao telefone">
   
-  <h1>Customer Churn </h1>   
-  <h2>Vamos Prever a rotatividade de clientes em uma indústria de telecomunicações!!</h2>
+  <h1>Escreva o nome aqui </h1>   
+  <h2>Titulo aqui</h2>
   <div class="contentservice">  
 
-        <div id="texto">O Churn é uma métrica que indica o quanto sua 
-          empresa perdeu de receita de clientes.
+        <div id="texto">Escreva seu texto aqui.
           <br>
           <br>
-          Devido a necessidade de retenção dos clientes existentes, 
-          pelo fato de que o custo de aquisição de um novo cliente é 
-          muito maior do que para manter o existente, esta análise foi
-           feita para entender o comportamento do consumidor e, por sua vez, 
-           prever a associação dos clientes, se eles deixarão ou não a empresa.
+          Escreva seu texto aqui.
         </div>
 
         <div id="alinhar">
@@ -95,200 +90,88 @@
 
             <div class="row">
               <div class="col-25">
-                <label for="Genero"><b>Genero:</b></label>
+                <label for="Type_of_Travel	"><b>Type_of_Travel	:</b></label>
               </div>
               <div class="col-75">
-                <select id="Genero" name="Genero" required>
-                  <option value="0">Feminino</option>
-                  <option value="1">Masculino</option>
+                <select id="Type_of_Travel	" name="Type_of_Travel	" required>
+                  <option value="0">Personal Travel</option>
+                  <option value="1">Business travel</option>
                 </select>
               </div>
             </div>
             
             <div class="row">
               <div class="col-25">
-                <label for="Casado"><b>Casado?:</b></label>
+                <label for="Customer_Type"><b>Customer_Type:</b></label>
               </div>
               <div class="col-75">
-                <select id="Casado" name="Casado" required>
-                  <option value="1">Sim</option>
-                  <option value="0">Nao</option>
+                <select id="Customer_Type" name="Customer_Type" required>
+                  <option value="1">Loyal Customer</option>
+                  <option value="0">disloyal Customer</option>
                 </select>
               </div>
             </div>
             
             <div class="row">
               <div class="col-25">
-                <label for="Dependentes"><b>Dependentes?:</b></label>
+                <label for="Class"><b>Class:</b></label>
               </div>
               <div class="col-75">
-                <select id="Dependentes" name="Dependentes" required>
-                  <option value="1">Sim</option>
-                  <option value="0">Nao</option>
+                <select id="Class" name="Class" required>
+                  <option value="0">Eco</option>
+                  <option value="1">Business</option>
+                  <option value="2">Eco Plus</option>
                 </select> 
               </div>
             </div>
             
             <div class="row">
               <div class="col-25">
-                <label for="MesesComoCliente"><b>Meses Como Cliente:</b></label>
+                <label for="Age"><b>Age:</b></label>
               </div>
               <div class="col-75">
-                <input type="number" name="MesesComoCliente" required>
+                <input type="number" name="Age" required>
               </div>
             </div>
 
             <div class="row">
               <div class="col-25">
-                <label for="ServicoTelefone"><b>Serviço de Telefone:</b></label>
+                <label for="Flight_Distance"><b>Flight_Distance:</b></label>
               </div>
               <div class="col-75">
-                <select id="ServicoTelefone" name="ServicoTelefone"required>
-                  <option value="1">Sim</option>
-                  <option value="0">Nao</option>
-                </select> 
+                <input type="number" name="Flight_Distance" required>
+              </div>
+              
+            </div>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="Inflight_wifi_service"><b>Inflight_wifi_service:</b></label>
+              </div>
+              <div class="col-75">
+                <input type="number" name="Inflight_wifi_service" required>
+              </div>
+              
+            </div>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="Departure_Arrival_time_convenient"><b>Departure_Arrival_time_convenient:</b></label>
+              </div>
+              <div class="col-75">
+                <input type="number" name="Departure_Arrival_time_convenient" required> 
               </div>
             </div>
             
             <div class="row">
               <div class="col-25">
-                <label for="ServicoInternet"><b>Serviço de Internet:</b></label>
+                <label for="Ease_of_Online_booking"><b>Ease_of_Online_booking:</b></label>
               </div>
               <div class="col-75">
-                <select id="ServicoInternet" name="ServicoInternet"required>
-                  <option value="0"> Fibra</option>
-                  <option value="2"> DSL</option>
-                  <option value="1"> Não</option>
-                </select>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-25">
-                <label for="ServicoSegurancaOnline"><b>Serviço de Segurança on line:</b></label>
-              </div>
-              <div class="col-75">
-                <select id="ServicoSegurancaOnline" name="ServicoSegurancaOnline"required>
-                  <option value="0">Sim</option>
-                  <option value="1">Nao</option>
-                  <option value=" 2">Sem internet</option>
-                </select>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-25">
-                <label for="ServicoBackupOnline"><b>Serviço de Backup:</b></label>
-              </div>
-              <div class="col-75">
-                <select id="ServicoBackupOnline" name="ServicoBackupOnline"required>
-                  <option value="0">Sim</option>
-                  <option value="1">Nao</option>
-                  <option value=" 2">Sem internet</option>
-                </select>
+                <input type="number" name="Ease_of_Online_booking" required> 
               </div> 
             </div>
-              
-            <div class="row">
-              <div class="col-25">  
-                <label for="ProtecaoEquipamento"><b>Serviço de Proteção:</b></label>
-              </div>
-              <div class="col-75">
-                <select id="ProtecaoEquipamento" name="ProtecaoEquipamento"required>
-                  <option value="0">Sim</option>
-                  <option value="1">Nao</option>
-                  <option value=" 2">Sem internet</option>
-                </select> 
-              </div>
-            </div>
-              
-            <div class="row">
-              <div class="col-25"> 
-                <label for="ServicoSuporteTecnico"><b>Serviço de Suporte Técnico:</b></label>
-              </div>
-             <div class="col-75">
-                <select id="ServicoSuporteTecnico" name="ServicoSuporteTecnico"required>
-                  <option value="0">Sim</option>
-                  <option value="1">Nao</option>
-                  <option value=" 2">Sem internet</option>
-                </select> 
-              </div>
-            </div>
-             
-            <div class="row">
-              <div class="col-25">
-                <label for="ServicoStreamingTV"><b>Serviço de Streaming TV:</b></label>
-               </div>
-              <div class="col-75">
-                <select id="ServicoStreamingTV" name="ServicoStreamingTV"required>
-                  <option value="0">Sim</option>
-                  <option value="1">Nao</option>
-                  <option value=" 2">Sem internet</option>
-                </select> 
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-25">    
-                <label for="ServicoFilmes"><b>Serviço de Filmes:</b></label>
-              </div>
-              <div class="col-75">
-                <select id="ServicoFilmes" name="ServicoFilmes"required>
-                  <option value="0">Sim</option>
-                  <option value="1">Nao</option>
-                  <option value=" 2">Sem internet</option>
-                </select>  
-              </div>           
-            </div>
-            
-            <div class="row">
-              <div class="col-25">
-                <label for="TipoContrato"><b>Tipo de Contrato:</b></label>
-              </div>
-             <div class="col-75">
-                <select id="TipoContrato" name="TipoContrato"required>
-                  <option value="0"> Mensal </option>
-                  <option value="1"> Anual </option>
-                  <option value="2"> 2 Anos </option>
-                </select>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-25">
-                <label for="FaturaDigital"><b>Fatura Digital:</b></label>
-              </div>
-              <div class="col-75">
-                <select id="FaturaDigital" name="FaturaDigital"required>
-                  <option value="1">Sim</option>
-                  <option value="0">Nao</option>
-                </select>
-              </div> 
-            </div>
-            
-            <div class="row">
-              <div class="col-25">
-                <label for="FormaPagamento"><b>Forma de Pagamento :</b></label>
-              </div>
-              <div class="col-75">
-                <select id="FormaPagamento" name="FormaPagamento"required>
-                  <option value="0">Boleto Eletronico</option>
-                  <option value="1">Cartao de Credito</option>
-                  <option value="2">Boleto Impresso</option>
-                  <option value="3">Debito Automatico</option>
-                </select> 
-              </div>
-            </div>
-             
-            <div class="row">
-              <div class="col-25">
-                <label for="ValorMensal"><b>Valor Mensal:</b></label>
-              </div>
-              <div class="col-75">
-                <input type="number" name="ValorMensal" step=".01"required>
-              </div>
-            </div>
-           
+                 
 
             <div class="button">
               <button type="submit">Analisar</button>
